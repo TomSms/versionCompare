@@ -32,5 +32,6 @@ int main()
 
     std::cout << "version:1.a12b.3\t version: 1.a123b.3  \t"    << "compare result:" << VersionCompare2::compare("1.a12b.3","1.a123b.3")<< std::endl;
     std::cout << "version:1.ab1b.3\t version: 1.a123b.3  \t"    << "compare result:" << VersionCompare2::compare("1.ab1b.3","1.a123b.3")<< std::endl;
+    std::cout << "version:1.b1b.3\t version: 1.ab123b.3  \t"    << "compare result:" << VersionCompare2::compare("1.b1b.3","1.ab123b.3")<< std::endl;
     return 0;
 }

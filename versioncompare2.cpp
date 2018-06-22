@@ -19,17 +19,17 @@ int compareString(const std::string &v1,const std::string &v2){
     int len1 = v1.size();
     int len2 = v2.size();
     int len = len1 > len2 ? len2 : len1;
-
-    for(int i = 0;i< len;i++){
-        if(v1[i] > v2[i]){
-            return 1;
+    if(len1 == len2){
+        for(int i = 0;i< len;i++){
+            if(v1[i] > v2[i]){
+                return 1;
+            }
+            if(v1[i] < v2[i]){
+                return -1;
+            }
+            continue;
         }
-        if(v1[i] < v2[i]){
-            return -1;
-        }
-        continue;
     }
-
     if(len1 > len2) return 1;
     if(len1 < len2) return -1;
     return 0;
@@ -50,18 +50,7 @@ int VersionCompare2::compare(const std::string &v1,const std::string &v2){
     int ret = 0;
     int len = len1 > len2 ? len2 : len1;
     int n1,n2;
-/*
-    std::cout << "==================vv1========================" << std::endl;
-    for(int i = 0;i< len1;i++){
-        std::cout << vv1[i] << "\t";
-    }
-    std::cout <<std::endl;
-    std::cout << "==================vv2========================" << std::endl;
-    for(int i = 0;i< len2;i++){
-        std::cout << vv2[i] << "\t";
-    }
-    std::cout <<std::endl;
-*/
+
     for(int i = 0;i< len;i++){
         ret = isSameType(vv1[i],vv2[i]);
         if(ret != 1) return ret;
